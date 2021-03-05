@@ -1,25 +1,23 @@
-str_input = input("A: ")
-delimoe = int(str_input)
-#print(type(delimoe))
-operation = input("+ / * - ^: ")
+str_input = input("Vvedite pervoe chislo: ")
+chisloodin = float(str_input)
 
-str_input2 = input("B: ")
-delitel = int(str_input2)
-#print(type(delitel))
+operation = input ("+ / * - ^ ")
+str_input2 = input("Vvedite vtoroe chislo: ")
+chislodva = float(str_input2)
 
-result = None
+if operation == "+":
+	result = chisloodin + chislodva
+elif operation == "/":
+         if chislodva != 0:
+                 result = chisloodin / chislodva
+         else:
+               result = "na nol' delit' nel'zya"       
+elif operation == "*":
+        result = chisloodin * chislodva
+elif operation == "-":
+	 result = chisloodin - chislodva
+elif operation == "^":
+        result = chisloodin ** chislodva
 
-if operation == '/':
- result = delimoe / delitel
-elif operation == '+':
- result = delimoe + delitel
-elif operation == '-':
- result = delimoe - delitel
-elif operation == '*':
- result = delimoe * delitel
-elif operation == '^':
- result = delimoe ** delitel
-else:
- result = "unknown"
-#print(type(result))
-print(result)
+print("Result: " + str(result))
+input("Нажмите Enter для выхода.")
